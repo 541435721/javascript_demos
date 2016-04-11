@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function max(a, b) {
+            return a > b ? a : b;
+        }
+        console.log(max(2, 4));
+        var func = max;
+        console.log(func(2, 5));
+
+        function max1() {
+            console.log(arguments);
+            var maxMun = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                maxMun = max(maxMun, arguments[i]);
+            }
+            console.log(maxMun);
+            return maxMun;
+        }
+        max1(1, 2, 15, 100, 31, 542);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
